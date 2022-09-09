@@ -1,1 +1,1 @@
-a repo containing file on preprocessor
+a readme on C
