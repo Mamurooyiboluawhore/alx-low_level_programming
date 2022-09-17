@@ -1,32 +1,31 @@
 #include "main.h"
 
 /**
- * print_square - Prints a square followed by a new line
- * @size: Defines the size of tge square
- * Return: square
- */
+* print_square -	Prints a square of '#'
+* @size:			The length of each side square to be printed
+*/
 
 void print_square(int size)
-
 {
-	int i;
-	int k;
+int length = size;
 
-	if (size <= 0)
+int width = size;
 
+if (size <= 0)
+	_putchar('\n');
+else
 	{
-		_putchar('\n');
-	}
-
-	else
-	{
-		for (i = 1; i <= size; i++)
-	{
-		for (k = 1; k <= size; k++)
+	while (length > 0)
 		{
-			_putchar(35);
-		}
+		width = size;
+
+		while (width > 0)
+			{
+			_putchar('#');
+			width--;
+			}
+		length--;
 		_putchar('\n');
-	}
+		}
 	}
 }
