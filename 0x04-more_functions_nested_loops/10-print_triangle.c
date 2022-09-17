@@ -20,13 +20,13 @@ else
 	{
 		for (k = 0; k <= (size - 1) - i; k++)
 		{
-			_putchar('');
+			_putchar(' ');
 		}
 		for (j = 0; j <= i; j++)
 		{
 			_putchar(35);
 		}
-		_putchar(\n);
+		_putchar('\n');
 	}
 }
 }
