@@ -21,6 +21,6 @@ for (j = 0; j < count ; j++)
 count--;
 rev = s[j];
 s[j] = s[count];
-s[count] = s[rev];
+s[count] = rev;
 }
 }
