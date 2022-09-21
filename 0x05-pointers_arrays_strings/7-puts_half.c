@@ -1,21 +1,28 @@
-#include "main.h"
+#include"main.h"
+
 /**
- * puts_half - Prints half of a string
- * @str: variables tgat store string
- * Return: void
- */
+ * puts_half - prints half of a string
+ *
+ * @str: string parameter input
+ *
+ * Return: Nothing
+*/
+
 void puts_half(char *str)
 {
-int j, k, len;
-len = 0;
-for (j = 0 ; str[j] != '\0'; j++)
-{
-len++;
-}
-k = (len / 2);
-if ((len % 2) == 1)
-k = ((len + 1) / 2);
-for (j = k; str[j] != '\0'; j++)
-_putchar(str[j]);
-_putchar('\n');
+	int l, n;
+
+	for (l = 0; str[l] != '\0'; ++l)
+		;
+
+	if (l % 2 == 0)
+	{
+		for (n = l / 2; str[n] != '\0'; ++n)
+			_putchar(str[n]);
+	} else
+	{
+		for (n = ((l - 1) / 2) + 1; str[n] != '\0'; ++n)
+			_putchar(str[n]);
+	}
+	_putchar('\n');
 }
