@@ -1,24 +1,25 @@
+#include <stdio.h>
 #include "main.h"
+
 /**
- * puts_half - Prints half of a string
- * @str: variables tgat store string
- * Return: void 
+ * print_array - prints n elements of an array of integers.
+ * @a: pointer
+ * @n: number of elements to be printed
+ * Return: void
  */
 
-void puts_half(char *str)
+void print_array(int *a, int n)
 {
-int j, k, len;
+int k;
 
-len = 0;
-for (j = 0 ; str[j] != '\0'; j++)
+for (k = 0; k < (n - 1); k++)
 {
-len ++;
+printf("%d,", a[k]);
 }
 
-k = (len / 2);
-if ((len % 2) == 1)
-k = ((len + 1) / 2);
-for ( j = k; str[j])
-_putchar(str[j]);
-_putchar('\n');
+if (k == (n - 1))
+{
+printf("%d", a[n - 1]);
+}
+printf("\n");
 }
