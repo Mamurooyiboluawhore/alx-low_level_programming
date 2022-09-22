@@ -2,7 +2,7 @@
 
 /**
  * rot13 - encode a string using rot13
- *@str: the string to encode
+ *@s: the string to encode
  *
  *Description: Each letter is replaced with the 13th letter after it
  * Return: pointer to the encoded string
