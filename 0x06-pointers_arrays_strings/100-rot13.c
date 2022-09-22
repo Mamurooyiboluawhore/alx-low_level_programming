@@ -1,10 +1,23 @@
 #include "main.h"
+
 /**
- * rot13 - Encrypts
- * @str: input string
- * Return: string
+ * rot13 - encode a string using rot13
+ *@str: the string to encode
+ *
+ *Description: Each letter is replaced with the 13th letter after it
+ * Return: pointer to the encoded string
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-return (str);
+
+char *c;
+char shift;
+
+for (c = s; *c; ++c)
+{
+shift = 'A' + (*c & 32);
+if (('a' <= *c && *c <= 'z') || ('A' <= *c && *c <= 'Z'))
+*c = (*c - shift + 13) % 26 + shift;
+}
+return (s);
 }
