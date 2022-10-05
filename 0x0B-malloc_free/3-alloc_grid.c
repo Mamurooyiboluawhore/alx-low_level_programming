@@ -25,14 +25,18 @@ for (n = 0; n < height; n++)
 {
 num[n] = (int *)malloc(sizeof(int) * width);
 if (num[n] == NULL)
+{
 for (m = 0; m < n; m++)
+{
 free(num[m]);
+}
 free(num);
 return (NULL);
 }
 for (m = 0; m < width; m++)
 {
 num[n][m] = 0;
+}
 }
 return (num);
 }
