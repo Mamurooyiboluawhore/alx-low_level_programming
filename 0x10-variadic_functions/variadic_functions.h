@@ -9,7 +9,7 @@
  */
 typedef struct print
 {
-	char *p
+	char *p;
 	void (*j)(va_list);
 } print_p;
 
