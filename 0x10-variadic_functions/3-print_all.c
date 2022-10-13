@@ -63,7 +63,6 @@ void print_f(va_list f)
 void print_all(const char * const format, ...)
 {
 	unsigned int indx, k;
- 
 	print_p p[] = {
 		{"c", print_c},
 		{"s", print_s},
@@ -83,7 +82,7 @@ void print_all(const char * const format, ...)
 		{
 			if (*(p[k].p) == format[indx])
 			{
-	 	  		printf("%s", separator);
+				printf("%s", separator);
 				p[k].j(list);
 				separator = ", ";
 				break;
@@ -92,7 +91,6 @@ void print_all(const char * const format, ...)
 		}
 		indx++;
 	}
-
 	va_end(list);
-        printf("\n");
+	printf("\n");
 }
