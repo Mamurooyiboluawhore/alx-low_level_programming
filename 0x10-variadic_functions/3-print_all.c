@@ -35,11 +35,11 @@ void print_i(va_list i)
 
 void print_s(va_list s)
 {
-		char *str = va_arg(s, char *);
+	char *str = va_arg(s, char *);
 
-		if (str == NULL)
-			str = "(nil)";
-		printf("%s", str);
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
 }
 
 /**
@@ -51,7 +51,7 @@ void print_s(va_list s)
 
 void print_f(va_list f)
 {
-		printf("%f", va_arg(f, double));
+	printf("%f", va_arg(f, double));
 }
 
 /**
@@ -62,7 +62,8 @@ void print_f(va_list f)
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int indx k;
+	unsigned int indx, k;
+ 
 	print_p p[] = {
 		{"c", print_c},
 		{"s", print_s},
@@ -80,16 +81,18 @@ void print_all(const char * const format, ...)
 		k = 0;
 		while (p[k].p != NULL)
 		{
-			if (*(p[k].p == format[indx]))
+			if (*(p[k].p) == format[indx])
 			{
-			printf("%s", separator);
-			p[k].j(list);
-			separator = ", ";
-			break;
-
+	 	  		printf("%s", separator);
+				p[k].j(list);
+				separator = ", ";
+				break;
 			}
 			k++;
-			}
-			va_end(list);
-			printf("\n");
+		}
+		indx++;
+	}
+
+	va_end(list);
+        printf("\n");
 }
