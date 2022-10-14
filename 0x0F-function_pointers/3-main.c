@@ -21,7 +21,7 @@ exit(98);
 }
 x = atoi(argv[1]);
 y = atoi(argv[3]);
-if = get_op_func(argv[2]);
+f = get_op_func(argv[2]);
 if (f == NULL)
 {												printf("Error\n");
 exit(99);
